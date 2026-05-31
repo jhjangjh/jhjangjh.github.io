@@ -1,16 +1,29 @@
-.navbar {
+/* Move navbar to the very top */
+html,
+body {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+nav.navbar,
+.navbar,
+.fixed-top {
   top: 0 !important;
   margin-top: 0 !important;
+}
+
+.navbar {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   min-height: 44px !important;
 }
 
-.navbar.fixed-top,
-nav.fixed-top {
-  top: 0 !important;
-}
-
+/* Keep content visible below the fixed navbar */
 body.fixed-top-nav {
   padding-top: 44px !important;
+}
+
+/* Capitalize section headings */
+h2 {
+  text-transform: capitalize;
 }
