@@ -18,6 +18,27 @@ nav.navbar,
   min-height: 44px !important;
 }
 
+/* Use full page width for navbar */
+.navbar .container,
+.navbar .container-fluid {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Align navbar items to the right */
+.navbar .navbar-collapse {
+  justify-content: flex-end !important;
+}
+
+.navbar-nav {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
 /* Keep content visible below the fixed navbar */
 body.fixed-top-nav {
   padding-top: 44px !important;
