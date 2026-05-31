@@ -31,3 +31,52 @@ I am an M.S. student in Electrical Engineering at the [Korea Advanced Institute 
 My research interests lie in multimodal large language models, knowledge distillation, agentic AI, multi-agent systems, and physical AI. Recently, my work has focused on improving the reasoning and visual grounding capabilities of multimodal large language models.
 
 Beyond multimodal language models, I am interested in building AI systems that can interact with complex environments through perception, reasoning, and action. This includes vision-language-action models, embodied AI, and agentic systems that can communicate, refine their decisions, and operate more reliably in real-world scenarios.
+
+<style>
+/* Force navbar to the right side of the viewport */
+nav.navbar,
+.navbar,
+.fixed-top {
+  position: fixed !important;
+  top: 0 !important;
+  right: 24px !important;
+  left: auto !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 44px !important;
+  z-index: 9999 !important;
+}
+
+/* Remove width restriction inside navbar */
+.navbar .container,
+.navbar .container-fluid {
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Keep navbar items in one row */
+.navbar-nav {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 1rem !important;
+  margin: 0 !important;
+}
+
+/* Keep the main content below the fixed navbar */
+body.fixed-top-nav {
+  padding-top: 44px !important;
+}
+
+/* Capitalize section headings */
+h2 {
+  text-transform: capitalize !important;
+}
+</style>
