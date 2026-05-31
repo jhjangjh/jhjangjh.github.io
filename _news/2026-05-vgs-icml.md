@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-<span style="color: red;"><strong>One paper accepted to ICML 2026</strong></span> <strong>(Spotlight, top 2.2%)</strong>.
+One paper accepted to ICML 2026 <span style="color: #ff4d4f !important; font-weight: 700;">(Spotlight, top 2.2%)</span>.
