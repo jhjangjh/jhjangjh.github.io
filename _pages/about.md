@@ -157,7 +157,27 @@ h2 {
 
 @media (max-width: 1200px) {
   .section-jump-nav {
-    display: none;
+    background: var(--global-bg-color);
+    border-bottom: 1px solid var(--global-divider-color);
+    border-left: 0;
+    border-top: 1px solid var(--global-divider-color);
+    flex-direction: row;
+    gap: 0.8rem;
+    left: 0;
+    overflow-x: auto;
+    padding: 0.55rem 1rem;
+    right: 0;
+    top: 0;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .section-jump-nav a {
+    flex: 0 0 auto;
+  }
+
+  .single-page-tools {
+    top: 3.25rem;
   }
 }
 </style>
