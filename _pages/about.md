@@ -13,7 +13,7 @@ profile:
     <p>KAIST</p>
     <p>Daejeon, Republic of Korea 🇰🇷</p>
 
-selected_papers: false # all publications are rendered below instead of only selected papers
+selected_papers: false # publications are rendered below the news section
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -31,14 +31,6 @@ I am an M.S. student in Electrical Engineering at the [Korea Advanced Institute 
 My research interests lie in multimodal large language models, knowledge distillation, agentic AI, multi-agent systems, and physical AI. Recently, my work has focused on improving the reasoning and visual grounding capabilities of multimodal large language models.
 
 Beyond multimodal language models, I am interested in building AI systems that can interact with complex environments through perception, reasoning, and action. This includes vision-language-action models, embodied AI, and agentic systems that can communicate, refine their decisions, and operate more reliably in real-world scenarios.
-
-## Publications
-
-<div class="publications">
-
-{% bibliography %}
-
-</div>
 
 <style>
 /* Force navbar to the right side of the viewport */
