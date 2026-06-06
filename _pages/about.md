@@ -34,20 +34,32 @@ latest_posts:
   <a href="#education">Education</a>
   <a href="#publications">Publications</a>
   <a href="#projects">Projects</a>
-  <a href="#honors">Honors</a>
-  <a href="#academic-services">Academic</a>
-  <a href="#teaching-assistance">TA</a>
+  {% if site.data.honors_awards.size > 0 %}
+    <a href="#honors">Honors</a>
+  {% endif %}
+  {% if site.data.academic_services.size > 0 %}
+    <a href="#academic-services">Academic</a>
+  {% endif %}
+  {% if site.data.teaching_assistant.size > 0 %}
+    <a href="#teaching-assistance">TA</a>
+  {% endif %}
 </nav>
 
 <section id="about" class="profile-section intro-section">
 
 <h2>About</h2>
 
-I am an M.S. student in Electrical Engineering at the [Korea Advanced Institute of Science and Technology (KAIST)](https://www.kaist.ac.kr/en/), where I am a member of the [Artificial Intelligence & Machine Learning (U-AIM) Lab](https://sanctusfactory.com/u-aim/) advised by Professor [Chang D. Yoo](https://sanctusfactory.com/family.php). I received my B.S. degree in Smart Vehicle Engineering from Konkuk University.
+<p>
+  I am an M.S. student in Electrical Engineering at the <a href="https://www.kaist.ac.kr/en/">Korea Advanced Institute of Science and Technology (KAIST)</a>, where I am a member of the <a href="https://sanctusfactory.com/u-aim/">Artificial Intelligence &amp; Machine Learning (U-AIM) Lab</a> advised by Professor <a href="https://sanctusfactory.com/family.php">Chang D. Yoo</a>. I received my B.S. degree in Smart Vehicle Engineering from Konkuk University.
+</p>
 
-My research interests lie in multimodal large language models, knowledge distillation, agentic AI, multi-agent systems, and physical AI. Recently, my work has focused on improving the reasoning and visual grounding capabilities of multimodal large language models.
+<p>
+  My research interests lie in multimodal large language models, knowledge distillation, agentic AI, multi-agent systems, and physical AI. Recently, my work has focused on improving the reasoning and visual grounding capabilities of multimodal large language models.
+</p>
 
-Beyond multimodal language models, I am interested in building AI systems that can interact with complex environments through perception, reasoning, and action. This includes vision-language-action models, embodied AI, and agentic systems that can communicate, refine their decisions, and operate more reliably in real-world scenarios.
+<p>
+  Beyond multimodal language models, I am interested in building AI systems that can interact with complex environments through perception, reasoning, and action. This includes vision-language-action models, embodied AI, and agentic systems that can communicate, refine their decisions, and operate more reliably in real-world scenarios.
+</p>
 
 {% include manual_socials.liquid %}
 
@@ -130,6 +142,17 @@ h2 {
 
 .profile-section h2 {
   margin-top: 0;
+}
+
+.intro-section a {
+  color: var(--global-theme-color);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.intro-section p {
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 1200px) {
