@@ -167,6 +167,7 @@ h2 {
 
   .section-jump-nav a {
     flex: 0 0 auto;
+    line-height: 1.2rem;
   }
 
   .single-page-tools {
@@ -180,11 +181,19 @@ h2 {
   .single-page-tools #light-toggle {
     align-items: center;
     display: inline-flex;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     height: 1.2rem;
     justify-content: center;
     line-height: 1;
+    padding: 0;
     width: 1.2rem;
+  }
+
+  .single-page-tools #light-toggle i,
+  .single-page-tools #light-toggle svg {
+    display: block;
+    line-height: 1;
+    margin: 0;
   }
 }
 </style>
