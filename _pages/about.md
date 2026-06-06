@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: M.S. Student, Electrical Engineering, KAIST
+subtitle: M.S. Student @ KAIST EE
 
 profile:
   align: left

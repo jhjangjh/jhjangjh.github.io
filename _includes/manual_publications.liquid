@@ -67,16 +67,16 @@
           {% if has_publication_links %}
             <div class="publication-links">
               {% if paper.page_url and paper.page_url != "" %}
-                <a href="{{ paper.page_url }}">[page]</a>
+                <a href="{{ paper.page_url }}">Page</a>
               {% endif %}
               {% if paper.paper_url and paper.paper_url != "" %}
-                <a href="{{ paper.paper_url }}">[paper]</a>
+                <a href="{{ paper.paper_url }}">Paper</a>
               {% endif %}
               {% if paper.github_url and paper.github_url != "" %}
-                <a href="{{ paper.github_url }}">[github]</a>
+                <a href="{{ paper.github_url }}">Code</a>
               {% endif %}
               {% for link in paper.links %}
-                <a href="{{ link.url }}">[{{ link.label }}]</a>
+                <a href="{{ link.url }}">{{ link.label }}</a>
               {% endfor %}
             </div>
           {% endif %}
