@@ -8,11 +8,9 @@ last_name: Jang
 contact_note: >
   Feel free to contact me by email for any inquiries!😊
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Jaehyun Jang is an M.S. student in Electrical Engineering at KAIST. His research interests include multimodal large language models, knowledge distillation, agentic AI, multi-agent systems, and physical AI.
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Multimodal Large Language Models, Agentic AI, Physical AI # add your own keywords or leave empty
+  Personal website of Jaehyun Jang, an M.S. student in Electrical Engineering at KAIST working on multimodal large language models, visual grounding, and embodied AI.
+footer_text:
+keywords: Jaehyun Jang, KAIST, artificial intelligence, machine learning, multimodal large language models, visual grounding, embodied AI # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🛤️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
