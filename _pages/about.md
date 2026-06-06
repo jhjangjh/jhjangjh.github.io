@@ -168,7 +168,7 @@ h2 {
     gap: 0.8rem;
     left: 0;
     overflow-x: auto;
-    padding: 0.45rem 1rem;
+    padding: 0.55rem 1rem;
     right: 0;
     top: 0;
     white-space: nowrap;
@@ -177,15 +177,15 @@ h2 {
 
   .section-jump-nav a {
     flex: 0 0 auto;
-    line-height: 1.35rem;
+    line-height: 1.2rem;
   }
 
   .single-page-tools {
     align-items: center;
     display: flex !important;
     flex: 0 0 auto;
-    height: 1.35rem;
-    line-height: 1.35rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
     order: -1;
     position: static;
   }
@@ -193,25 +193,15 @@ h2 {
   .single-page-tools #light-toggle {
     align-items: center;
     display: inline-flex;
-    font-size: 1rem !important;
-    height: 1.35rem !important;
+    font-size: 0.9rem !important;
+    height: 1.2rem !important;
     justify-content: center;
     line-height: 1;
     margin: 0 !important;
-    min-height: 1.35rem !important;
+    min-height: 1.2rem !important;
     padding: 0 !important;
     vertical-align: middle;
-    width: 1.35rem !important;
-  }
-
-  .single-page-tools #light-toggle i,
-  .single-page-tools #light-toggle svg {
-    display: block;
-    font-size: 1rem !important;
-    height: 1rem !important;
-    line-height: 1 !important;
-    margin: 0 !important;
-    width: 1rem !important;
+    width: 1.2rem !important;
   }
 }
 </style>
