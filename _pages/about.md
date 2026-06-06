@@ -144,8 +144,7 @@ h2 {
 .intro-section a {
   color: var(--single-page-accent-color);
   font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 0.16em;
+  text-decoration: none;
 }
 
 .intro-section .manual-social-link {
