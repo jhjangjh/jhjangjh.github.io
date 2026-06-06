@@ -28,7 +28,18 @@ latest_posts:
 ---
 <div class="single-page-tools" aria-label="Display settings"></div>
 
-<section class="profile-section intro-section">
+<nav class="section-jump-nav" aria-label="Section navigation">
+  <a href="#about">About</a>
+  <a href="#news">News</a>
+  <a href="#education">Education</a>
+  <a href="#publications">Publications</a>
+  <a href="#projects">Projects</a>
+  <a href="#honors">Honors</a>
+  <a href="#academic-services">Academic</a>
+  <a href="#teaching-assistance">TA</a>
+</nav>
+
+<section id="about" class="profile-section intro-section">
 
 <h2>About</h2>
 
@@ -75,6 +86,30 @@ body.fixed-top-nav {
   width: 2.5rem;
 }
 
+.section-jump-nav {
+  border-left: 2px solid var(--global-divider-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  line-height: 1.2;
+  padding-left: 0.9rem;
+  position: fixed;
+  right: 1.5rem;
+  top: 5rem;
+  z-index: 9999;
+}
+
+.section-jump-nav a {
+  color: #667789;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.section-jump-nav a:hover {
+  color: var(--global-theme-color);
+}
+
 /* Capitalize section headings */
 h2 {
   text-transform: capitalize !important;
@@ -84,6 +119,7 @@ h2 {
   border-top: 1px solid var(--global-divider-color);
   margin-top: 2rem;
   padding-top: 1.35rem;
+  scroll-margin-top: 1.5rem;
 }
 
 .intro-section {
@@ -94,6 +130,12 @@ h2 {
 
 .profile-section h2 {
   margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  .section-jump-nav {
+    display: none;
+  }
 }
 </style>
 

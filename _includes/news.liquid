@@ -1,7 +1,7 @@
 {% assign news = site.news | reverse %}
 
 {% if news.size > 0 %}
-<section class="profile-section news-section">
+<section id="news" class="profile-section news-section">
 <h2>News</h2>
 <div class="news">
   <div class="table-responsive">
@@ -24,6 +24,16 @@
   </div>
 </div>
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var newsSection = document.querySelector(".news-section");
+    var previousHeading = newsSection ? newsSection.previousElementSibling : null;
+
+    if (previousHeading && previousHeading.tagName === "H2" && previousHeading.textContent.trim().toLowerCase() === "news") {
+      previousHeading.hidden = true;
+    }
+  });
+</script>
 {% endif %}
 
 {% if page.permalink == "/" %}

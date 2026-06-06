@@ -1,9 +1,13 @@
-<section class="profile-section">
+{% include profile_sections.liquid section="education" with_style=true %}
+
+<section id="publications" class="profile-section">
   {% include manual_publications.liquid %}
 </section>
 
-<section class="profile-section">
+<section id="projects" class="profile-section">
   {% include manual_projects.liquid %}
 </section>
 
-{% include profile_sections.liquid %}
+{% include profile_sections.liquid section="honors" %}
+{% include profile_sections.liquid section="academic" %}
+{% include profile_sections.liquid section="ta" %}

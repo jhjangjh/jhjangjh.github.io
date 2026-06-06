@@ -1,4 +1,5 @@
-<section class="profile-section profile-section-extra">
+{% if include.section == "honors" %}
+<section id="honors" class="profile-section profile-section-extra">
   <h2>Honors and Awards</h2>
   {% if site.data.honors_awards.size > 0 %}
     <ul class="profile-list compact-profile-list">
@@ -22,8 +23,10 @@
     </ul>
   {% endif %}
 </section>
+{% endif %}
 
-<section class="profile-section profile-section-extra">
+{% if include.section == "education" %}
+<section id="education" class="profile-section profile-section-extra">
   <h2>Education</h2>
   {% if site.data.educations.size > 0 %}
     <ul class="profile-list education-list">
@@ -68,8 +71,10 @@
     </ul>
   {% endif %}
 </section>
+{% endif %}
 
-<section class="profile-section profile-section-extra">
+{% if include.section == "academic" %}
+<section id="academic-services" class="profile-section profile-section-extra">
   <h2>Academic Services</h2>
   {% if site.data.academic_services.size > 0 %}
     <ul class="profile-list compact-profile-list">
@@ -87,8 +92,10 @@
     </ul>
   {% endif %}
 </section>
+{% endif %}
 
-<section class="profile-section profile-section-extra">
+{% if include.section == "ta" %}
+<section id="teaching-assistance" class="profile-section profile-section-extra">
   <h2>Teaching Assistance</h2>
   {% if site.data.teaching_assistant.size > 0 %}
     <ul class="profile-list compact-profile-list">
@@ -103,7 +110,9 @@
     </ul>
   {% endif %}
 </section>
+{% endif %}
 
+{% if include.with_style %}
 <style>
   .profile-list {
     list-style: none;
@@ -168,3 +177,4 @@
     text-decoration: none;
   }
 </style>
+{% endif %}
