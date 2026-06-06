@@ -1,9 +1,8 @@
-- tag: C21
-  selected: true
+- tag: C1
+  selected: false
   title: "Decomposed On-Policy Distillation for Vision-Language Reasoning: Steering Gradients for Visual Grounding"
   authors:
     - name: "Hee Suk Yoon"
-      highlight: true
     - name: "Eunseop Yoon"
     - name: "Jaehyun Jang"
       me: true
@@ -13,59 +12,27 @@
     - name: "Qi Dai"
     - name: "Chong Luo"
     - name: "Chang D. Yoo"
-  venue: "ICML 2026 (Spotlight, top 2.2%)"
-  links:
-    - label: "paper"
-      url: "#"
+  venue: "ICML 2026"
+  note: "Spotlight, top 2.2%"
+  paper_url: "https://arxiv.org/abs/2606.00564"
+  github_url: ""
+  page_url: ""
 
-- tag: C20
-  selected: true
-  title: "PDCR: Perception-Decomposed Confidence Reward for Vision-Language Reasoning"
+- tag: P1
+  selected: false
+  title: "PACR: Progressively Ascending Confidence Reward for LLM Reasoning"
   authors:
-    - name: "Hee Suk Yoon"
-      highlight: true
-      equal: true
     - name: "Eunseop Yoon"
-      equal: true
-    - name: "Ji Woo Hong"
+    - name: "Hee Suk Yoon"
+    - name: "Jaehyun Jang"
+      me: true
     - name: "SooHwan Eom"
-    - name: "Gwanhyeong Koo"
-    - name: "Mark Hasegawa-Johnson"
     - name: "Qi Dai"
     - name: "Chong Luo"
+    - name: "Mark Hasegawa-Johnson"
     - name: "Chang D. Yoo"
-  venue: "CVPR 2026"
-  links:
-    - label: "paper"
-      url: "#"
-
-- tag: C19
-  selected: false
-  title: "Diffusion Negative Preference Optimization Made Simple"
-  authors:
-    - name: "Joshua Tian Jin Tee"
-    - name: "Hee Suk Yoon"
-      highlight: true
-    - name: "Sunjae Yoon"
-    - name: "Tri Ton"
-    - name: "Chang D. Yoo"
-  venue: "ICLR 2026"
-  links:
-    - label: "paper"
-      url: "#"
-
-- tag: C18
-  selected: false
-  title: "TESSAR: Geometry-Aware Active Regression via Dynamic Voronoi Tessellation"
-  authors:
-    - name: "Seong Jin Cho"
-    - name: "Gwangsu Kim"
-    - name: "Junghyun Lee"
-    - name: "Hee Suk Yoon"
-      highlight: true
-    - name: "Joshua Tian Jin Tee"
-    - name: "Chang D. Yoo"
-  venue: "ICLR 2026"
-  links:
-    - label: "paper"
-      url: "#"
+  venue: "preprint"
+  note: ""
+  paper_url: "https://arxiv.org/abs/2510.22255"
+  github_url: ""
+  page_url: ""
