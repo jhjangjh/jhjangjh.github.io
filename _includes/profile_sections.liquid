@@ -1,7 +1,7 @@
 {% if include.section == "honors" %}
 {% if site.data.honors_awards.size > 0 %}
 <section id="honors" class="profile-section profile-section-extra">
-  <h2>Honors and Awards</h2>
+  <h2 class="no-title-case">Honors and Awards</h2>
   <ul class="profile-list compact-profile-list">
     {% for item in site.data.honors_awards %}
       <li>
@@ -118,6 +118,10 @@
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  .no-title-case {
+    text-transform: none !important;
   }
 
   .profile-list li {

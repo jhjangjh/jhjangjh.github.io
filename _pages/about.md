@@ -199,26 +199,19 @@ h2 {
     margin: 0 !important;
     min-height: 1.2rem !important;
     padding: 0 !important;
+    position: relative;
+    transform: none;
     vertical-align: middle;
     width: 1.2rem !important;
   }
-}
 
-@media (min-width: 1001px) and (max-width: 1200px) {
-  .single-page-tools #light-toggle {
-    transform: translateY(-0.04rem);
-  }
-}
-
-@media (min-width: 901px) and (max-width: 1000px) {
-  .single-page-tools #light-toggle {
-    transform: translateY(0.04rem);
-  }
-}
-
-@media (min-width: 641px) and (max-width: 900px) {
-  .single-page-tools #light-toggle {
-    transform: translateY(-0.32rem);
+  .single-page-tools #light-toggle i,
+  .single-page-tools #light-toggle svg {
+    left: 50%;
+    margin: 0 !important;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 </style>
