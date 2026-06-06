@@ -54,11 +54,7 @@ latest_posts:
 </p>
 
 <p>
-  My research interests lie in multimodal large language models, knowledge distillation, agentic AI, multi-agent systems, and physical AI. Recently, my work has focused on improving the reasoning and visual grounding capabilities of multimodal large language models.
-</p>
-
-<p>
-  Beyond multimodal language models, I am interested in building AI systems that can interact with complex environments through perception, reasoning, and action. This includes vision-language-action models, embodied AI, and agentic systems that can communicate, refine their decisions, and operate more reliably in real-world scenarios.
+  My research focuses on enhancing the visual grounding and reasoning capabilities of Multimodal Large Language Models (MLLMs). Ultimately, I aim to advance <strong>Embodied and Agentic AI systems</strong>—spanning physical, interactive, and multi-agent AI—that bridge the gap between perception and action to operate reliably in complex environments.
 </p>
 
 {% include manual_socials.liquid %}
@@ -85,10 +81,6 @@ body.fixed-top-nav {
   right: 1.5rem;
   top: 1rem;
   z-index: 10000;
-}
-
-.single-page-tools:empty {
-  display: none;
 }
 
 .single-page-tools #light-toggle {
@@ -177,7 +169,17 @@ h2 {
   }
 
   .single-page-tools {
-    top: 3.25rem;
+    align-items: center;
+    display: flex !important;
+    flex: 0 0 auto;
+    order: -1;
+    position: static;
+  }
+
+  .single-page-tools #light-toggle {
+    font-size: 1rem;
+    height: 1.6rem;
+    width: 1.6rem;
   }
 }
 </style>
@@ -185,11 +187,28 @@ h2 {
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var tools = document.querySelector(".single-page-tools");
+    var jumpNav = document.querySelector(".section-jump-nav");
     var toggle = document.querySelector("#light-toggle");
+    var mediaQuery = window.matchMedia("(max-width: 1200px)");
 
     if (tools && toggle) {
       tools.appendChild(toggle);
       tools.style.display = "flex";
     }
+
+    function placeTools() {
+      if (!tools || !jumpNav) {
+        return;
+      }
+
+      if (mediaQuery.matches) {
+        jumpNav.insertBefore(tools, jumpNav.firstChild);
+      } else {
+        document.body.insertBefore(tools, document.body.firstChild);
+      }
+    }
+
+    placeTools();
+    mediaQuery.addEventListener("change", placeTools);
   });
 </script>
