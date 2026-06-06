@@ -153,6 +153,7 @@ h2 {
     border-bottom: 1px solid var(--global-divider-color);
     border-left: 0;
     border-top: 1px solid var(--global-divider-color);
+    align-items: center;
     flex-direction: row;
     gap: 0.8rem;
     left: 0;
@@ -177,9 +178,13 @@ h2 {
   }
 
   .single-page-tools #light-toggle {
-    font-size: 1rem;
-    height: 1.6rem;
-    width: 1.6rem;
+    align-items: center;
+    display: inline-flex;
+    font-size: 0.95rem;
+    height: 1.2rem;
+    justify-content: center;
+    line-height: 1;
+    width: 1.2rem;
   }
 }
 </style>
