@@ -174,6 +174,7 @@ h2 {
     align-items: center;
     display: flex !important;
     flex: 0 0 auto;
+    height: 1.2rem;
     order: -1;
     position: static;
   }
@@ -187,13 +188,6 @@ h2 {
     line-height: 1;
     padding: 0;
     width: 1.2rem;
-  }
-
-  .single-page-tools #light-toggle i,
-  .single-page-tools #light-toggle svg {
-    display: block;
-    line-height: 1;
-    margin: 0;
   }
 }
 </style>
