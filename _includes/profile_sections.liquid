@@ -16,7 +16,7 @@
         {% endif %}
 
         {% if item.date and item.date != "" %}
-          <div class="profile-date">{{ item.date }}</div>
+          <div class="profile-list-muted profile-date">{{ item.date }}</div>
         {% endif %}
       </li>
     {% endfor %}
@@ -160,8 +160,8 @@
 
   .profile-date {
     color: #667789;
-    font-style: normal;
-    font-weight: 400;
+    font-style: normal !important;
+    font-weight: 300 !important;
   }
 
   .education-heading {

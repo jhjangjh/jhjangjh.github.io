@@ -177,14 +177,15 @@ h2 {
 
   .section-jump-nav a {
     flex: 0 0 auto;
-    line-height: 1.2rem;
+    line-height: 1.25rem;
   }
 
   .single-page-tools {
     align-items: center;
     display: flex !important;
     flex: 0 0 auto;
-    height: 1.2rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
     order: -1;
     position: static;
   }
@@ -192,12 +193,14 @@ h2 {
   .single-page-tools #light-toggle {
     align-items: center;
     display: inline-flex;
-    font-size: 0.9rem;
-    height: 1.2rem;
+    font-size: 1.05rem !important;
+    height: 1.25rem !important;
     justify-content: center;
     line-height: 1;
-    padding: 0;
-    width: 1.2rem;
+    margin: 0 !important;
+    min-height: 1.25rem !important;
+    padding: 0 !important;
+    width: 1.25rem !important;
   }
 }
 </style>
