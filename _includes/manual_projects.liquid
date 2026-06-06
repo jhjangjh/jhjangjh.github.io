@@ -1,0 +1,89 @@
+{% assign sorted_projects = site.projects | sort: "importance" %}
+
+{% if sorted_projects.size > 0 %}
+  <h2>Projects</h2>
+
+  <div class="manual-projects">
+    {% for project in sorted_projects %}
+      {% assign project_url = project.redirect | default: project.url %}
+      {% if project.redirect %}
+        {% assign project_href = project_url %}
+      {% else %}
+        {% assign project_href = project_url | relative_url %}
+      {% endif %}
+      <article class="manual-project">
+        {% if project.img %}
+          <a class="manual-project-image" href="{{ project_href }}" {% if project.redirect %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            <img src="{{ project.img | relative_url }}" alt="{{ project.title }}">
+          </a>
+        {% endif %}
+
+        <div class="manual-project-body">
+          <h3>
+            <a href="{{ project_href }}" {% if project.redirect %}target="_blank" rel="noopener noreferrer"{% endif %}>
+              {{ project.title }}
+            </a>
+          </h3>
+
+          {% if project.description %}
+            <p>{{ project.description }}</p>
+          {% endif %}
+
+          {% if project.category %}
+            <span class="manual-project-category">{{ project.category }}</span>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<style>
+  .manual-projects {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 0.75rem;
+  }
+
+  .manual-project {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .manual-project-image {
+    aspect-ratio: 16 / 9;
+    background: var(--global-card-bg-color);
+    display: block;
+    overflow: hidden;
+  }
+
+  .manual-project-image img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .manual-project-body {
+    padding: 0.85rem 0.95rem 0.95rem;
+  }
+
+  .manual-project-body h3 {
+    font-size: 1rem;
+    line-height: 1.35;
+    margin: 0 0 0.35rem;
+  }
+
+  .manual-project-body p {
+    color: #667789;
+    line-height: 1.45;
+    margin: 0 0 0.65rem;
+  }
+
+  .manual-project-category {
+    color: #667789;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+  }
+</style>
