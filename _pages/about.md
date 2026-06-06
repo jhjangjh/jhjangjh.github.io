@@ -204,15 +204,21 @@ h2 {
   }
 }
 
-@media (min-width: 901px) and (max-width: 1200px) {
+@media (min-width: 1001px) and (max-width: 1200px) {
   .single-page-tools #light-toggle {
     transform: translateY(-0.04rem);
   }
 }
 
+@media (min-width: 901px) and (max-width: 1000px) {
+  .single-page-tools #light-toggle {
+    transform: translateY(0.04rem);
+  }
+}
+
 @media (min-width: 641px) and (max-width: 900px) {
   .single-page-tools #light-toggle {
-    transform: translateY(-0.22rem);
+    transform: translateY(-0.32rem);
   }
 }
 </style>
