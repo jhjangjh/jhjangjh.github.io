@@ -1,0 +1,170 @@
+<section class="profile-section profile-section-extra">
+  <h2>Honors and Awards</h2>
+  {% if site.data.honors_awards.size > 0 %}
+    <ul class="profile-list compact-profile-list">
+      {% for item in site.data.honors_awards %}
+        <li>
+          {% if item.url and item.url != "" %}
+            <a class="profile-list-title" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+          {% else %}
+            <span class="profile-list-title">{{ item.title }}</span>
+          {% endif %}
+
+          {% if item.awarder and item.awarder != "" %}
+            <div class="profile-list-muted">{{ item.awarder }}</div>
+          {% endif %}
+
+          {% if item.date and item.date != "" %}
+            <div class="profile-date">{{ item.date }}</div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</section>
+
+<section class="profile-section profile-section-extra">
+  <h2>Education</h2>
+  {% if site.data.educations.size > 0 %}
+    <ul class="profile-list education-list">
+      {% for item in site.data.educations %}
+        <li>
+          <div class="education-heading">
+            {% if item.logo and item.logo != "" %}
+              <img class="education-logo" src="{{ item.logo | relative_url }}" alt="{{ item.institution }}">
+            {% endif %}
+            <span class="profile-list-title">{{ item.institution }}</span>
+            {% if item.location and item.location != "" %}
+              <span class="profile-list-muted">, {{ item.location }}</span>
+            {% endif %}
+          </div>
+
+          {% if item.degree and item.degree != "" %}
+            <div class="profile-list-muted">{{ item.degree }}</div>
+          {% endif %}
+
+          {% if item.period and item.period != "" %}
+            <div class="profile-period">{{ item.period }}</div>
+          {% endif %}
+
+          {% if item.advisor and item.advisor.name and item.advisor.name != "" %}
+            <div class="profile-list-muted">
+              Advisor:
+              {% if item.advisor.url and item.advisor.url != "" %}
+                <a class="profile-inline-link" href="{{ item.advisor.url }}" target="_blank" rel="noopener noreferrer">{{ item.advisor.name }}</a>
+              {% else %}
+                {{ item.advisor.name }}
+              {% endif %}
+            </div>
+          {% endif %}
+
+          {% if item.details and item.details.size > 0 %}
+            {% for detail in item.details %}
+              <div class="profile-list-muted">{{ detail }}</div>
+            {% endfor %}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</section>
+
+<section class="profile-section profile-section-extra">
+  <h2>Academic Services</h2>
+  {% if site.data.academic_services.size > 0 %}
+    <ul class="profile-list compact-profile-list">
+      {% for item in site.data.academic_services %}
+        <li>
+          <span class="profile-list-title">{{ item.role }}</span>
+          {% if item.venue and item.venue != "" %}
+            <span class="profile-list-muted">, {{ item.venue }}</span>
+          {% endif %}
+          {% if item.period and item.period != "" %}
+            <span class="profile-list-muted"> {{ item.period }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</section>
+
+<section class="profile-section profile-section-extra">
+  <h2>Teaching Assistance</h2>
+  {% if site.data.teaching_assistant.size > 0 %}
+    <ul class="profile-list compact-profile-list">
+      {% for item in site.data.teaching_assistant %}
+        <li>
+          <span class="profile-list-title">{{ item.course }}</span>
+          {% if item.period and item.period != "" %}
+            <span class="profile-list-muted"> {{ item.period }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</section>
+
+<style>
+  .profile-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .profile-list li {
+    line-height: 1.45;
+    margin-bottom: 1.2rem;
+    padding-left: 1.15rem;
+    position: relative;
+  }
+
+  .profile-list li::before {
+    background: #3f7fca;
+    border-radius: 999px;
+    content: "";
+    height: 1.05rem;
+    left: 0.2rem;
+    position: absolute;
+    top: 0.25rem;
+    width: 0.18rem;
+  }
+
+  .compact-profile-list li {
+    margin-bottom: 0.55rem;
+  }
+
+  .profile-list-title {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .profile-list-muted {
+    color: #667789;
+  }
+
+  .profile-date,
+  .profile-period {
+    color: #667789;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  .education-heading {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .education-logo {
+    height: 1.05rem;
+    object-fit: contain;
+    width: auto;
+  }
+
+  .profile-inline-link {
+    color: inherit;
+    text-decoration: none;
+  }
+</style>

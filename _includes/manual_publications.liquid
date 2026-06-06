@@ -4,7 +4,6 @@
 
 <div class="manual-publications">
   <p class="publication-notes">
-    <em>* denotes equal contribution</em><br>
     <span class="selected-star">&#9733;</span> <em>denotes selected publications</em><br>
     <em>[C]: Conference Paper [J]: Journal Paper [P]: Preprint</em>
   </p>
@@ -105,7 +104,6 @@
   }
 
   .publication-item {
-    color: #111827;
     display: flex;
     gap: 1rem;
     line-height: 1.45;
@@ -115,12 +113,13 @@
   }
 
   .publication-marker {
-    background: #7c8795;
-    height: 0.3rem;
-    left: 0.45rem;
+    background: #3f7fca;
+    border-radius: 999px;
+    height: 1.15rem;
+    left: 0.38rem;
     position: absolute;
-    top: 0.62rem;
-    width: 0.3rem;
+    top: 0.24rem;
+    width: 0.18rem;
   }
 
   .publication-image {
@@ -134,7 +133,7 @@
 
   .publication-image img {
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
   }
 
@@ -157,7 +156,8 @@
   }
 
   .publication-author-link {
-    border-bottom: 1px solid #8fcfc2;
+    color: inherit;
+    text-decoration: none;
   }
 
   .me-author {

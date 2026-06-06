@@ -14,7 +14,7 @@ profile:
     <p>Daejeon, Republic of Korea 🇰🇷</p>
 
 selected_papers: false # publications are rendered below the news section
-social: true # includes social icons at the bottom of the page
+social: false # social icons are rendered manually in the introduction
 
 announcements:
   enabled: true # includes a list of news items
@@ -28,11 +28,19 @@ latest_posts:
 ---
 <div class="single-page-tools" aria-label="Display settings"></div>
 
+<section class="profile-section intro-section">
+
+<h2>About</h2>
+
 I am an M.S. student in Electrical Engineering at the [Korea Advanced Institute of Science and Technology (KAIST)](https://www.kaist.ac.kr/en/), where I am a member of the [Artificial Intelligence & Machine Learning (U-AIM) Lab](https://sanctusfactory.com/u-aim/) advised by Professor [Chang D. Yoo](https://sanctusfactory.com/family.php). I received my B.S. degree in Smart Vehicle Engineering from Konkuk University.
 
 My research interests lie in multimodal large language models, knowledge distillation, agentic AI, multi-agent systems, and physical AI. Recently, my work has focused on improving the reasoning and visual grounding capabilities of multimodal large language models.
 
 Beyond multimodal language models, I am interested in building AI systems that can interact with complex environments through perception, reasoning, and action. This includes vision-language-action models, embodied AI, and agentic systems that can communicate, refine their decisions, and operate more reliably in real-world scenarios.
+
+{% include manual_socials.liquid %}
+
+</section>
 
 <style>
 /* Hide the navbar for the one-page layout. */
@@ -70,6 +78,22 @@ body.fixed-top-nav {
 /* Capitalize section headings */
 h2 {
   text-transform: capitalize !important;
+}
+
+.profile-section {
+  border-top: 1px solid var(--global-divider-color);
+  margin-top: 2rem;
+  padding-top: 1.35rem;
+}
+
+.intro-section {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.profile-section h2 {
+  margin-top: 0;
 }
 </style>
 

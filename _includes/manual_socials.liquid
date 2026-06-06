@@ -1,0 +1,70 @@
+<div class="manual-socials" aria-label="Social links">
+  {% if site.data.socials.cv_pdf %}
+    <a class="manual-social-link manual-social-cv" href="{{ site.data.socials.cv_pdf | relative_url }}" aria-label="CV">
+      CV
+    </a>
+  {% endif %}
+
+  {% if site.data.socials.email %}
+    <a class="manual-social-link" href="mailto:{{ site.data.socials.email }}" aria-label="Email">
+      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+    </a>
+  {% endif %}
+
+  {% if site.data.socials.scholar_userid %}
+    <a class="manual-social-link" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" aria-label="Google Scholar">
+      <i class="ai ai-google-scholar" aria-hidden="true"></i>
+    </a>
+  {% endif %}
+
+  {% if site.data.socials.custom_social.url %}
+    <a class="manual-social-link manual-social-image-link" href="{{ site.data.socials.custom_social.url }}" aria-label="{{ site.data.socials.custom_social.title }}">
+      <img src="{{ site.data.socials.custom_social.logo | relative_url }}" alt="{{ site.data.socials.custom_social.title }}">
+    </a>
+  {% endif %}
+</div>
+
+{% if site.contact_note %}
+  <p class="manual-social-note">{{ site.contact_note }}</p>
+{% endif %}
+
+<style>
+  .manual-socials {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.15rem;
+    margin-top: 0.9rem;
+  }
+
+  .manual-social-link {
+    align-items: center;
+    color: var(--global-text-color);
+    display: inline-flex;
+    font-size: 2.75rem;
+    height: 3.1rem;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    width: 3.1rem;
+  }
+
+  .manual-social-cv {
+    font-size: 2.55rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    width: auto;
+  }
+
+  .manual-social-image-link img {
+    border-radius: 5px;
+    display: block;
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+
+  .manual-social-note {
+    font-size: 0.9rem;
+    margin: 0.55rem 0 0;
+  }
+</style>

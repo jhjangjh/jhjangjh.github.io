@@ -1,6 +1,8 @@
 {% assign news = site.news | reverse %}
 
 {% if news.size > 0 %}
+<section class="profile-section news-section">
+<h2>News</h2>
 <div class="news">
   <div class="table-responsive">
     <table class="table table-sm table-borderless">
@@ -21,6 +23,7 @@
     </table>
   </div>
 </div>
+</section>
 {% endif %}
 
 {% if page.permalink == "/" %}

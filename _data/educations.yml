@@ -1,0 +1,17 @@
+- institution: "Korea Advanced Institute of Science and Technology (KAIST)"
+  logo: "assets/educations/kaist.png"
+  location: "Daejeon, Republic of Korea"
+  degree: "M.S. Student in Electrical Engineering"
+  period: "Sep. 2024 - Present"
+  advisor:
+    name: "Chang D. Yoo"
+    url: "https://sanctusfactory.com/family.php"
+  details: []
+
+- institution: "Konkuk University"
+  logo: "assets/educations/konkuk.png"
+  location: "Seoul, Republic of Korea"
+  degree: "B.S. in Smart Vehicle Engineering"
+  period: "Mar. 2018 - Aug. 2024"
+  details:
+    - "GPA: 4.38/4.5 (Summa Cum Laude)"
