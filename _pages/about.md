@@ -62,6 +62,10 @@ latest_posts:
 </section>
 
 <style>
+:root {
+  --single-page-accent-color: #3f7fca;
+}
+
 /* Hide the navbar for the one-page layout. */
 nav.navbar,
 .navbar,
@@ -84,6 +88,7 @@ body.fixed-top-nav {
 }
 
 .single-page-tools #light-toggle {
+  color: var(--single-page-accent-color);
   font-size: 1.25rem;
   height: 2.5rem;
   margin: 0;
@@ -111,7 +116,7 @@ body.fixed-top-nav {
 }
 
 .section-jump-nav a:hover {
-  color: var(--global-theme-color);
+  color: var(--single-page-accent-color);
 }
 
 /* Capitalize section headings */
@@ -137,10 +142,15 @@ h2 {
 }
 
 .intro-section a {
-  color: var(--global-theme-color);
+  color: var(--single-page-accent-color);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 0.16em;
+}
+
+.intro-section .manual-social-link {
+  color: var(--single-page-accent-color);
+  text-decoration: none !important;
 }
 
 .intro-section p {
