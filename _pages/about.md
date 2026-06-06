@@ -203,6 +203,12 @@ h2 {
     width: 1.2rem !important;
   }
 }
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .single-page-tools #light-toggle {
+    transform: translateY(-0.12rem);
+  }
+}
 </style>
 
 <script>
