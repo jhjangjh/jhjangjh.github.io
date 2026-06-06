@@ -1,89 +1,145 @@
-{% assign sorted_projects = site.projects | sort: "importance" %}
-
-{% if sorted_projects.size > 0 %}
+{% if site.data.projects and site.data.projects.size > 0 %}
   <h2>Projects</h2>
 
   <div class="manual-projects">
-    {% for project in sorted_projects %}
-      {% assign project_url = project.redirect | default: project.url %}
-      {% if project.redirect %}
-        {% assign project_href = project_url %}
-      {% else %}
-        {% assign project_href = project_url | relative_url %}
-      {% endif %}
-      <article class="manual-project">
-        {% if project.img %}
-          <a class="manual-project-image" href="{{ project_href }}" {% if project.redirect %}target="_blank" rel="noopener noreferrer"{% endif %}>
-            <img src="{{ project.img | relative_url }}" alt="{{ project.title }}">
-          </a>
-        {% endif %}
+    <ul class="project-list">
+      {% for project in site.data.projects %}
+        <li class="project-item">
+          <span class="project-marker" aria-hidden="true"></span>
 
-        <div class="manual-project-body">
-          <h3>
-            <a href="{{ project_href }}" {% if project.redirect %}target="_blank" rel="noopener noreferrer"{% endif %}>
-              {{ project.title }}
-            </a>
-          </h3>
-
-          {% if project.description %}
-            <p>{{ project.description }}</p>
+          {% if project.image and project.image != "" %}
+            <div class="project-image">
+              <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+            </div>
           {% endif %}
 
-          {% if project.category %}
-            <span class="manual-project-category">{{ project.category }}</span>
-          {% endif %}
-        </div>
-      </article>
-    {% endfor %}
+          <div class="project-content">
+            <span class="project-title">{{ project.title }}</span>
+
+            {% if project.people and project.people.size > 0 %}
+              <div class="project-people">
+                with
+                {% for person in project.people %}
+                  {% if person.url and person.url != "" %}
+                    <a class="project-person-link" href="{{ person.url }}" target="_blank" rel="noopener noreferrer">{{ person.name }}</a>
+                  {% else %}
+                    <span>{{ person.name }}</span>
+                  {% endif %}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            {% if project.period and project.period != "" %}
+              <div class="project-period">{{ project.period }}</div>
+            {% endif %}
+
+            {% assign has_project_links = false %}
+            {% if project.page_url and project.page_url != "" %}
+              {% assign has_project_links = true %}
+            {% endif %}
+            {% if project.demo_url and project.demo_url != "" %}
+              {% assign has_project_links = true %}
+            {% endif %}
+            {% if project.github_url and project.github_url != "" %}
+              {% assign has_project_links = true %}
+            {% endif %}
+
+            {% if has_project_links %}
+              <div class="project-links">
+                {% if project.page_url and project.page_url != "" %}
+                  <a href="{{ project.page_url }}">[page]</a>
+                {% endif %}
+                {% if project.demo_url and project.demo_url != "" %}
+                  <a href="{{ project.demo_url }}">[demo]</a>
+                {% endif %}
+                {% if project.github_url and project.github_url != "" %}
+                  <a href="{{ project.github_url }}">[github]</a>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 {% endif %}
 
 <style>
   .manual-projects {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     margin-top: 0.75rem;
   }
 
-  .manual-project {
+  .project-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-item {
+    color: #111827;
+    display: flex;
+    gap: 1rem;
+    line-height: 1.45;
+    margin-bottom: 1.5rem;
+    padding-left: 1.55rem;
+    position: relative;
+  }
+
+  .project-marker {
+    background: #7c8795;
+    height: 0.3rem;
+    left: 0.45rem;
+    position: absolute;
+    top: 0.62rem;
+    width: 0.3rem;
+  }
+
+  .project-image {
+    aspect-ratio: 4 / 3;
+    background: var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
     border-radius: 6px;
+    flex: 0 0 9rem;
     overflow: hidden;
   }
 
-  .manual-project-image {
-    aspect-ratio: 16 / 9;
-    background: var(--global-card-bg-color);
-    display: block;
-    overflow: hidden;
-  }
-
-  .manual-project-image img {
+  .project-image img {
     height: 100%;
     object-fit: cover;
     width: 100%;
   }
 
-  .manual-project-body {
-    padding: 0.85rem 0.95rem 0.95rem;
+  .project-content {
+    min-width: 0;
   }
 
-  .manual-project-body h3 {
-    font-size: 1rem;
-    line-height: 1.35;
-    margin: 0 0 0.35rem;
+  .project-title {
+    font-weight: 700;
   }
 
-  .manual-project-body p {
+  .project-people,
+  .project-period {
     color: #667789;
-    line-height: 1.45;
-    margin: 0 0 0.65rem;
   }
 
-  .manual-project-category {
-    color: #667789;
-    font-size: 0.85rem;
-    text-transform: uppercase;
+  .project-person-link {
+    border-bottom: 1px solid #8fcfc2;
+    color: inherit;
+  }
+
+  .project-links a {
+    font-weight: 700;
+    margin-right: 0.35rem;
+  }
+
+  @media (max-width: 640px) {
+    .project-item {
+      display: block;
+    }
+
+    .project-image {
+      margin-bottom: 0.6rem;
+      max-width: 12rem;
+    }
   }
 </style>

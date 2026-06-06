@@ -1,4 +1,5 @@
 - tag: C1
+  image: "assets/paper/vgs.png"
   selected: false
   title: "Decomposed On-Policy Distillation for Vision-Language Reasoning: Steering Gradients for Visual Grounding"
   authors:
@@ -8,7 +9,6 @@
       url: "https://esyoon7.github.io/"
     - name: "Jaehyun Jang"
       me: true
-      url: ""
     - name: "SooHwan Eom"
       url: ""
     - name: "Ji Woo Hong"
@@ -28,6 +28,7 @@
   page_url: ""
 
 - tag: P1
+  image: "assets/paper/pacr.png"
   selected: false
   title: "PACR: Progressively Ascending Confidence Reward for LLM Reasoning"
   authors:
@@ -37,7 +38,6 @@
       url: "https://hee-suk-yoon.github.io/"
     - name: "Jaehyun Jang"
       me: true
-      url: ""
     - name: "SooHwan Eom"
       url: ""
     - name: "Qi Dai"

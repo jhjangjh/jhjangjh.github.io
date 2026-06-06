@@ -50,8 +50,10 @@ body.fixed-top-nav {
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  min-height: 2rem;
-  margin-bottom: 0.75rem;
+  position: fixed;
+  right: 1.5rem;
+  top: 1rem;
+  z-index: 10000;
 }
 
 .single-page-tools:empty {
@@ -59,7 +61,10 @@ body.fixed-top-nav {
 }
 
 .single-page-tools #light-toggle {
+  font-size: 1.25rem;
+  height: 2.5rem;
   margin: 0;
+  width: 2.5rem;
 }
 
 /* Capitalize section headings */

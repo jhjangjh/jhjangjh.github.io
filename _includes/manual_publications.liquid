@@ -13,62 +13,75 @@
     {% for paper in site.data.publications %}
       <li class="publication-item">
         <span class="publication-marker" aria-hidden="true"></span>
-        {% if paper.selected %}
-          <span class="selected-star" aria-label="selected publication">&#9733;</span>
-        {% endif %}
-        <strong>[{{ paper.tag }}] {{ paper.title }}</strong>
 
-        <div class="publication-authors">
-          {% for author in paper.authors %}
-            {% if author.url and author.url != "" %}
-              <a class="publication-author publication-author-link{% if author.me %} me-author{% endif %}" href="{{ author.url }}" target="_blank" rel="noopener noreferrer">
-                {{ author.name }}{% if author.equal %}*{% endif %}
-              </a>
-            {% else %}
-              <span class="publication-author{% if author.me %} me-author{% endif %}">
-                {{ author.name }}{% if author.equal %}*{% endif %}
-              </span>
-            {% endif %}{% unless forloop.last %}, {% endunless %}
-          {% endfor %}
-        </div>
-
-        <div class="publication-venue">
-          {{ paper.venue }}
-          {% if paper.note and paper.note != "" %}
-            <span class="publication-note">({{ paper.note }})</span>
-          {% endif %}
-        </div>
-
-        {% assign has_publication_links = false %}
-        {% if paper.page_url and paper.page_url != "" %}
-          {% assign has_publication_links = true %}
-        {% endif %}
-        {% if paper.paper_url and paper.paper_url != "" %}
-          {% assign has_publication_links = true %}
-        {% endif %}
-        {% if paper.github_url and paper.github_url != "" %}
-          {% assign has_publication_links = true %}
-        {% endif %}
-        {% if paper.links and paper.links.size > 0 %}
-          {% assign has_publication_links = true %}
-        {% endif %}
-
-        {% if has_publication_links %}
-          <div class="publication-links">
-            {% if paper.page_url and paper.page_url != "" %}
-              <a href="{{ paper.page_url }}">[page]</a>
-            {% endif %}
-            {% if paper.paper_url and paper.paper_url != "" %}
-              <a href="{{ paper.paper_url }}">[paper]</a>
-            {% endif %}
-            {% if paper.github_url and paper.github_url != "" %}
-              <a href="{{ paper.github_url }}">[github]</a>
-            {% endif %}
-            {% for link in paper.links %}
-              <a href="{{ link.url }}">[{{ link.label }}]</a>
-            {% endfor %}
+        {% if paper.image and paper.image != "" %}
+          <div class="publication-image">
+            <img src="{{ paper.image | relative_url }}" alt="{{ paper.title }}">
           </div>
         {% endif %}
+
+        <div class="publication-content">
+          {% if paper.selected %}
+            <span class="selected-star" aria-label="selected publication">&#9733;</span>
+          {% endif %}
+          <span class="publication-title">[{{ paper.tag }}] {{ paper.title }}</span>
+
+          <div class="publication-authors">
+            {% for author in paper.authors %}
+              {% if author.me %}
+                <span class="publication-author me-author">
+                  {{ author.name }}{% if author.equal %}*{% endif %}
+                </span>
+              {% elsif author.url and author.url != "" %}
+                <a class="publication-author publication-author-link" href="{{ author.url }}" target="_blank" rel="noopener noreferrer">
+                  {{ author.name }}{% if author.equal %}*{% endif %}
+                </a>
+              {% else %}
+                <span class="publication-author">
+                  {{ author.name }}{% if author.equal %}*{% endif %}
+                </span>
+              {% endif %}{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </div>
+
+          <div class="publication-venue">
+            {{ paper.venue }}
+            {% if paper.note and paper.note != "" %}
+              <span class="publication-note">({{ paper.note }})</span>
+            {% endif %}
+          </div>
+
+          {% assign has_publication_links = false %}
+          {% if paper.page_url and paper.page_url != "" %}
+            {% assign has_publication_links = true %}
+          {% endif %}
+          {% if paper.paper_url and paper.paper_url != "" %}
+            {% assign has_publication_links = true %}
+          {% endif %}
+          {% if paper.github_url and paper.github_url != "" %}
+            {% assign has_publication_links = true %}
+          {% endif %}
+          {% if paper.links and paper.links.size > 0 %}
+            {% assign has_publication_links = true %}
+          {% endif %}
+
+          {% if has_publication_links %}
+            <div class="publication-links">
+              {% if paper.page_url and paper.page_url != "" %}
+                <a href="{{ paper.page_url }}">[page]</a>
+              {% endif %}
+              {% if paper.paper_url and paper.paper_url != "" %}
+                <a href="{{ paper.paper_url }}">[paper]</a>
+              {% endif %}
+              {% if paper.github_url and paper.github_url != "" %}
+                <a href="{{ paper.github_url }}">[github]</a>
+              {% endif %}
+              {% for link in paper.links %}
+                <a href="{{ link.url }}">[{{ link.label }}]</a>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
       </li>
     {% endfor %}
   </ul>
@@ -93,6 +106,8 @@
 
   .publication-item {
     color: #111827;
+    display: flex;
+    gap: 1rem;
     line-height: 1.45;
     margin-bottom: 1.8rem;
     padding-left: 1.55rem;
@@ -106,6 +121,25 @@
     position: absolute;
     top: 0.62rem;
     width: 0.3rem;
+  }
+
+  .publication-image {
+    aspect-ratio: 4 / 3;
+    background: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    flex: 0 0 9rem;
+    overflow: hidden;
+  }
+
+  .publication-image img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .publication-content {
+    min-width: 0;
   }
 
   .selected-star {
@@ -124,11 +158,15 @@
 
   .publication-author-link {
     border-bottom: 1px solid #8fcfc2;
-    font-weight: 700;
   }
 
   .me-author {
     color: #8a20ff;
+    font-weight: 700;
+  }
+
+  .publication-title {
+    font-weight: 700;
   }
 
   .publication-note {
@@ -139,5 +177,16 @@
   .publication-links a {
     font-weight: 700;
     margin-right: 0.35rem;
+  }
+
+  @media (max-width: 640px) {
+    .publication-item {
+      display: block;
+    }
+
+    .publication-image {
+      margin-bottom: 0.6rem;
+      max-width: 12rem;
+    }
   }
 </style>
