@@ -1,7 +1,11 @@
 metadata:
-  last_updated: '2026-06-01'
+  last_updated: '2026-06-10'
 papers:
+  LG-BgEcAAAAJ:9yKSN-GCB0IC:
+    citations: 0
+    title: 'Decomposed On-Policy Distillation for Vision-Language Reasoning: Steering Gradients for Visual Grounding'
+    year: '2026'
   LG-BgEcAAAAJ:u-x6o8ySG0sC:
-    citations: 4
+    citations: 5
     title: 'PACR: Progressively Ascending Confidence Reward for LLM Reasoning'
     year: '2025'
