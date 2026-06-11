@@ -1,5 +1,5 @@
 - tag: C1
-  image: "assets/paper/vgs.png"
+  image: "assets/paper/vgs_v2.png"
   selected: false
   title: "Decomposed On-Policy Distillation for Vision-Language Reasoning: Steering Gradients for Visual Grounding"
   authors:
