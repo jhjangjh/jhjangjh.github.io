@@ -1,5 +1,5 @@
 - tag: C2
-  image: "assets/paper/trag.png"
+  image: "assets/paper/trag_v2.png"
   selected: true
   title: "Token-level Response-visual Attention Guidance for Multimodal LLMs Knowledge Distillation"
   authors:
