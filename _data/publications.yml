@@ -1,3 +1,26 @@
+- tag: C2
+  image: "assets/paper/trag.png"
+  selected: true
+  title: "Token-level Response-visual Attention Guidance for Multimodal LLMs Knowledge Distillation"
+  authors:
+    - name: "Jaehyun Jang"
+      me: true
+    - name: "Eunseop Yoon"
+      url: "https://esyoon7.github.io/"
+    - name: "Hee Suk Yoon"
+      url: "https://hee-suk-yoon.github.io/"
+    - name: "SooHwan Eom"
+      url: "https://eomsoohwan.github.io/"
+    - name: "Mark Hasegawa-Johnson"
+      url: "https://speechtechnology.web.illinois.edu/mark-a-hasegawa-johnson/"
+    - name: "Chang D. Yoo"
+      url: "https://sanctusfactory.com/family.php"
+  venue: "ECCV 2026"
+  note: ""
+  paper_url: ""
+  github_url: ""
+  page_url: ""
+
 - tag: C1
   image: "assets/paper/vgs_v2.png"
   selected: false
