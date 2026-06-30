@@ -1,12 +1,23 @@
 - institution: "Korea Advanced Institute of Science and Technology (KAIST)"
   logo: "assets/educations/kaist.png"
   location: "Daejeon, Republic of Korea"
-  degree: "M.S. Student in Electrical Engineering"
-  period: "Sep. 2024 - Present"
+  degree: "Ph.D. Student in the Department of AI Systems"
+  period: "Sep. 2026 - Present"
   advisor:
     name: "Chang D. Yoo"
     url: "https://sanctusfactory.com/family.php"
   details: []
+
+- institution: "Korea Advanced Institute of Science and Technology (KAIST)"
+  logo: "assets/educations/kaist.png"
+  location: "Daejeon, Republic of Korea"
+  degree: "M.S. in Electrical Engineering"
+  period: "Sep. 2024 - Aug. 2026"
+  advisor:
+    name: "Chang D. Yoo"
+    url: "https://sanctusfactory.com/family.php"
+  details:
+    - "GPA: 3.98/4.3"
 
 - institution: "Konkuk University"
   logo: "assets/educations/konkuk.png"

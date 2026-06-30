@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: M.S. Student @ KAIST EE
+subtitle: Ph.D. Student @ KAIST AI Systems
 
 profile:
   align: left
   image: prof_jaehyun.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>School of Electrical Engineering</p>
+    <p>Department of AI Systems</p>
     <p>KAIST</p>
     <p>Daejeon, Republic of Korea 🇰🇷</p>
 
@@ -50,7 +50,7 @@ latest_posts:
 <h2>Hello!</h2>
 
 <p>
-  I am an M.S. student in Electrical Engineering at the <a href="https://www.kaist.ac.kr/en/">Korea Advanced Institute of Science and Technology (KAIST)</a>, where I am a member of the <a href="https://sanctusfactory.com/u-aim/">Artificial Intelligence &amp; Machine Learning (U-AIM) Lab</a> advised by Professor <a href="https://sanctusfactory.com/family.php">Chang D. Yoo</a>. I received my B.S. degree in Smart Vehicle Engineering from Konkuk University.
+  I am a Ph.D. student in the Department of AI Systems at the <a href="https://www.kaist.ac.kr/en/">Korea Advanced Institute of Science and Technology (KAIST)</a> and a member of the <a href="https://sanctusfactory.com/u-aim/">Artificial Intelligence &amp; Machine Learning (U-AIM) Lab</a>, advised by Professor <a href="https://sanctusfactory.com/family.php">Chang D. Yoo</a>. Prior to this, I received my M.S. in Electrical Engineering from KAIST under the same advisor, and my B.S. in Smart Vehicle Engineering from Konkuk University.
 </p>
 
 <p>
