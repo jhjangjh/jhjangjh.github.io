@@ -95,6 +95,8 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
+          pip3 install -r requirements.txt
+          timeout 90 python bin/update_scholar_citations.py || echo "Citation update failed; building with checked-in citation data."
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
