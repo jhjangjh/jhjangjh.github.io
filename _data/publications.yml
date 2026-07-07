@@ -18,7 +18,7 @@
   venue: "ECCV 2026"
   note: ""
   paper_url: "https://arxiv.org/abs/2607.02593"
-  github_url: ""
+  github_url: "https://github.com/jhjangjh/TRAG"
   page_url: ""
 
 - tag: C1
@@ -47,7 +47,7 @@
   venue: "ICML 2026"
   note: "Spotlight, top 2.2%"
   paper_url: "https://arxiv.org/abs/2606.00564"
-  github_url: ""
+  github_url: "https://github.com/hee-suk-yoon/Decomposed_OPD"
   page_url: ""
 
 - tag: P1
