@@ -77,19 +77,41 @@
 {% if site.data.academic_services.size > 0 %}
 <section id="academic-services" class="profile-section profile-section-extra">
   <h2>Academic Services</h2>
-  <ul class="profile-list compact-profile-list">
-    {% for item in site.data.academic_services %}
-      <li>
-        <span class="profile-list-title">{{ item.role }}</span>
-        {% if item.venue and item.venue != "" %}
-          <span class="profile-list-muted">, {{ item.venue }}</span>
-        {% endif %}
-        {% if item.period and item.period != "" %}
-          <span class="profile-list-muted"> {{ item.period }}</span>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+
+  {% for group in site.data.academic_services %}
+    {% if group.items and group.items.size > 0 %}
+      <h3 class="profile-subheading">{{ group.section }}</h3>
+      <ul class="profile-list compact-profile-list">
+        {% for item in group.items %}
+          <li>
+            {% if item.role and item.role != "" %}
+              <span class="profile-list-title">{{ item.role }}</span>
+              {% if item.venue and item.venue != "" %}
+                <span class="profile-list-muted">, {{ item.venue }}</span>
+              {% endif %}
+            {% elsif item.venue and item.venue != "" %}
+              <span class="profile-list-title">{{ item.venue }}</span>
+            {% endif %}
+            {% if item.period and item.period != "" %}
+              <span class="profile-list-muted">: {{ item.period }}</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% elsif group.role or group.venue %}
+      <ul class="profile-list compact-profile-list">
+        <li>
+          <span class="profile-list-title">{{ group.role }}</span>
+          {% if group.venue and group.venue != "" %}
+            <span class="profile-list-muted">, {{ group.venue }}</span>
+          {% endif %}
+          {% if group.period and group.period != "" %}
+            <span class="profile-list-muted"> {{ group.period }}</span>
+          {% endif %}
+        </li>
+      </ul>
+    {% endif %}
+  {% endfor %}
 </section>
 {% endif %}
 {% endif %}
@@ -154,6 +176,14 @@
 
   .profile-list-muted {
     color: #667789;
+  }
+
+  .profile-subheading {
+    color: var(--single-page-accent-color);
+    font-size: 1.28rem;
+    font-weight: 700;
+    margin: 1.1rem 0 0.7rem;
+    text-transform: none !important;
   }
 
   .profile-period {

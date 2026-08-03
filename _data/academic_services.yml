@@ -1,1 +1,11 @@
-[]
+- section: "Journal Reviewing"
+  items:
+    - venue: "IEEE Transactions on Audio, Speech and Language Processing"
+
+- section: "Conference Reviewing"
+  items: []
+
+# - section: "Conference Reviewing"
+#   items:
+#     - venue: "International Conference on Machine Learning (ICML)"
+#       period: "2027"
