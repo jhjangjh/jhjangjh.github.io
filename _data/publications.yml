@@ -1,3 +1,26 @@
+- tag: J1
+  image: "assets/paper/alva.png"
+  selected: false
+  title: "Action- and Language-Conditioned Video Assessment for Embodied Control"
+  authors:
+    - name: "Hwanhee Kim"
+      url: "https://khhandrea.github.io/"
+    - name: "Jaehyun Jang"
+      me: true
+    - name: "Seungmin Cha"
+      url: "https://scholar.google.com/citations?hl=en&user=H0uA_p8AAAAJ"
+    - name: "Hyeonseo Yun"
+      url: ""
+    - name: "Donghoon Lee"
+      url: ""
+    - name: "Chang D. Yoo"
+      url: "https://sanctusfactory.com/family.php"
+  venue: "Sensors"
+  note: ""
+  paper_url: "https://arxiv.org/abs/2608.08273"
+  github_url: ""
+  page_url: ""
+
 - tag: C2
   image: "assets/paper/trag_v2.png"
   selected: true
