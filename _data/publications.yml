@@ -19,6 +19,8 @@
   note: ""
   paper_url: "https://arxiv.org/abs/2608.08273"
   github_url: ""
+  poster_url: ""
+  video_url: ""
   page_url: ""
 
 - tag: C2
@@ -42,6 +44,8 @@
   note: ""
   paper_url: "https://arxiv.org/abs/2607.02593"
   github_url: "https://github.com/jhjangjh/TRAG"
+  poster_url: "assets/poster/TRAG_poster.pdf"
+  video_url: "https://youtu.be/IVkWogUE1aQ"
   page_url: ""
 
 - tag: C1
@@ -71,6 +75,8 @@
   note: "Spotlight, top 2.2%"
   paper_url: "https://arxiv.org/abs/2606.00564"
   github_url: "https://github.com/hee-suk-yoon/Decomposed_OPD"
+  poster_url: ""
+  video_url: ""
   page_url: ""
 
 - tag: P1
@@ -98,4 +104,6 @@
   note: ""
   paper_url: "https://arxiv.org/abs/2510.22255"
   github_url: ""
+  poster_url: ""
+  video_url: ""
   page_url: ""

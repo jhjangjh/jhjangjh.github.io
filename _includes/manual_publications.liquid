@@ -60,6 +60,12 @@
           {% if paper.github_url and paper.github_url != "" %}
             {% assign has_publication_links = true %}
           {% endif %}
+          {% if paper.poster_url and paper.poster_url != "" %}
+            {% assign has_publication_links = true %}
+          {% endif %}
+          {% if paper.video_url and paper.video_url != "" %}
+            {% assign has_publication_links = true %}
+          {% endif %}
           {% if paper.links and paper.links.size > 0 %}
             {% assign has_publication_links = true %}
           {% endif %}
@@ -74,6 +80,12 @@
               {% endif %}
               {% if paper.github_url and paper.github_url != "" %}
                 <a href="{{ paper.github_url }}">Code</a>
+              {% endif %}
+              {% if paper.poster_url and paper.poster_url != "" %}
+                <a href="{{ paper.poster_url }}">Poster</a>
+              {% endif %}
+              {% if paper.video_url and paper.video_url != "" %}
+                <a href="{{ paper.video_url }}">Video</a>
               {% endif %}
               {% for link in paper.links %}
                 <a href="{{ link.url }}">{{ link.label }}</a>
