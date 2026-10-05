@@ -1,3 +1,51 @@
+- tag: P3
+  image: "assets/paper/soccer.png"
+  selected: false
+  title: "Locomotion-Grounded Humanoid Soccer: Task-Gated Reinforcement Learning of a Multi-Directional Kicking Library"
+  authors:
+    - name: "Abu Hanif Muhammad Syarubany"
+      url: "https://github.com/hanifsyarubany/"
+    - name: "Jaehyun Jang"
+      me: true
+    - name: "Hwanhee Kim"
+      url: "https://khhandrea.github.io/"
+    - name: "Kyuwon Kim"
+      url: "https://rbdnjs7830.github.io/"
+    - name: "Seungyeon Ryu"
+      url: ""
+    - name: "Chang D. Yoo"
+      url: "https://sanctusfactory.com/family.php"
+  venue: "preprint"
+  note: ""
+  paper_url: "https://arxiv.org/abs/2609.38852"
+  github_url: ""
+  poster_url: ""
+  video_url: ""
+  page_url: ""
+
+- tag: P2
+  image: "assets/paper/edrrm.png"
+  selected: false
+  title: "Event-Driven Refresh and Recurrence Memory to Reduce Stale Grounding in Referring Video Object Segmentation"
+  authors:
+    - name: "Abu Hanif Muhammad Syarubany"
+      url: "https://github.com/hanifsyarubany/"
+    - name: "Jaehyun Jang"
+      me: true
+    - name: "Siwoo Lim"
+      url: "https://siw00-lim.github.io/"
+    - name: "Seungyeon Ryu"
+      url: ""
+    - name: "Chang D. Yoo"
+      url: "https://sanctusfactory.com/family.php"
+  venue: "preprint"
+  note: ""
+  paper_url: "https://arxiv.org/abs/2609.38758"
+  github_url: ""
+  poster_url: ""
+  video_url: ""
+  page_url: ""
+
 - tag: J1
   image: "assets/paper/alva_v2.png"
   selected: false
